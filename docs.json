@@ -1,0 +1,290 @@
+[
+  {
+    "Constant" : [
+
+    ],
+    "submodules" : [
+
+    ],
+    "Function" : [
+
+    ],
+    "Variable" : [
+      {
+        "desc" : "String Slack token. Uses a [legacy token] (https:\/\/api.slack.com\/custom-integrations\/legacy-tokens)",
+        "stripped_doc" : [
+          "String Slack token. Uses a [legacy token] (https:\/\/api.slack.com\/custom-integrations\/legacy-tokens)"
+        ],
+        "parameters" : [
+
+        ],
+        "doc" : "String Slack token. Uses a [legacy token] (https:\/\/api.slack.com\/custom-integrations\/legacy-tokens)",
+        "notes" : [
+
+        ],
+        "signature" : "ZoomSlack.slackToken",
+        "type" : "Variable",
+        "returns" : [
+
+        ],
+        "name" : "slackToken",
+        "def" : "ZoomSlack.slackToken"
+      },
+      {
+        "desc" : "String Status text. Defaults to \"On a Call\" if not set.",
+        "stripped_doc" : [
+          "String Status text. Defaults to \"On a Call\" if not set."
+        ],
+        "parameters" : [
+
+        ],
+        "doc" : "String Status text. Defaults to \"On a Call\" if not set.",
+        "notes" : [
+
+        ],
+        "signature" : "ZoomSlack.statusText",
+        "type" : "Variable",
+        "returns" : [
+
+        ],
+        "name" : "statusText",
+        "def" : "ZoomSlack.statusText"
+      },
+      {
+        "desc" : "String Status emoji. Defaults to \":spiral_calendar_pad:\" if not set.",
+        "stripped_doc" : [
+          "String Status emoji. Defaults to \":spiral_calendar_pad:\" if not set."
+        ],
+        "parameters" : [
+
+        ],
+        "doc" : "String Status emoji. Defaults to \":spiral_calendar_pad:\" if not set.",
+        "notes" : [
+
+        ],
+        "signature" : "ZoomSlack.statusEmoji",
+        "type" : "Variable",
+        "returns" : [
+
+        ],
+        "name" : "statusEmoji",
+        "def" : "ZoomSlack.statusEmoji"
+      },
+      {
+        "desc" : "String indicating how long until the status expires. Default is \"N\" (Never). Status will always be cleared when a meeting is stopped so this is more insurance than anything if set.",
+        "stripped_doc" : [
+          "String indicating how long until the status expires. Default is \"N\" (Never). Status will always be cleared when a meeting is stopped so this is more insurance than anything if set.",
+          "Valid expiration times:",
+          "N",
+          "30M",
+          "45M",
+          "1H"
+        ],
+        "parameters" : [
+
+        ],
+        "doc" : "String indicating how long until the status expires. Default is \"N\" (Never). Status will always be cleared when a meeting is stopped so this is more insurance than anything if set.\nValid expiration times:\nN\n30M\n45M\n1H",
+        "notes" : [
+
+        ],
+        "signature" : "ZoomSlack.expiration",
+        "type" : "Variable",
+        "returns" : [
+
+        ],
+        "name" : "expiration",
+        "def" : "ZoomSlack.expiration"
+      },
+      {
+        "desc" : "Logger object used within the Spoon. Can be accessed to set the default log level for the messages coming from the Spoon.",
+        "stripped_doc" : [
+          "Logger object used within the Spoon. Can be accessed to set the default log level for the messages coming from the Spoon."
+        ],
+        "parameters" : [
+
+        ],
+        "doc" : "Logger object used within the Spoon. Can be accessed to set the default log level for the messages coming from the Spoon.",
+        "notes" : [
+
+        ],
+        "signature" : "ZoomSlack.logger",
+        "type" : "Variable",
+        "returns" : [
+
+        ],
+        "name" : "logger",
+        "def" : "ZoomSlack.logger"
+      }
+    ],
+    "stripped_doc" : [
+
+    ],
+    "Deprecated" : [
+
+    ],
+    "desc" : "Set your Slack status when in a Zoom meeting. Clear it when you\"re done.",
+    "type" : "Module",
+    "Constructor" : [
+
+    ],
+    "doc" : "Set your Slack status when in a Zoom meeting. Clear it when you\"re done.\n\nhttps:\/\/github.com\/chrisscott",
+    "Field" : [
+
+    ],
+    "Command" : [
+
+    ],
+    "items" : [
+      {
+        "desc" : "String indicating how long until the status expires. Default is \"N\" (Never). Status will always be cleared when a meeting is stopped so this is more insurance than anything if set.",
+        "stripped_doc" : [
+          "String indicating how long until the status expires. Default is \"N\" (Never). Status will always be cleared when a meeting is stopped so this is more insurance than anything if set.",
+          "Valid expiration times:",
+          "N",
+          "30M",
+          "45M",
+          "1H"
+        ],
+        "parameters" : [
+
+        ],
+        "doc" : "String indicating how long until the status expires. Default is \"N\" (Never). Status will always be cleared when a meeting is stopped so this is more insurance than anything if set.\nValid expiration times:\nN\n30M\n45M\n1H",
+        "notes" : [
+
+        ],
+        "signature" : "ZoomSlack.expiration",
+        "type" : "Variable",
+        "returns" : [
+
+        ],
+        "name" : "expiration",
+        "def" : "ZoomSlack.expiration"
+      },
+      {
+        "desc" : "Logger object used within the Spoon. Can be accessed to set the default log level for the messages coming from the Spoon.",
+        "stripped_doc" : [
+          "Logger object used within the Spoon. Can be accessed to set the default log level for the messages coming from the Spoon."
+        ],
+        "parameters" : [
+
+        ],
+        "doc" : "Logger object used within the Spoon. Can be accessed to set the default log level for the messages coming from the Spoon.",
+        "notes" : [
+
+        ],
+        "signature" : "ZoomSlack.logger",
+        "type" : "Variable",
+        "returns" : [
+
+        ],
+        "name" : "logger",
+        "def" : "ZoomSlack.logger"
+      },
+      {
+        "desc" : "String Slack token. Uses a [legacy token] (https:\/\/api.slack.com\/custom-integrations\/legacy-tokens)",
+        "stripped_doc" : [
+          "String Slack token. Uses a [legacy token] (https:\/\/api.slack.com\/custom-integrations\/legacy-tokens)"
+        ],
+        "parameters" : [
+
+        ],
+        "doc" : "String Slack token. Uses a [legacy token] (https:\/\/api.slack.com\/custom-integrations\/legacy-tokens)",
+        "notes" : [
+
+        ],
+        "signature" : "ZoomSlack.slackToken",
+        "type" : "Variable",
+        "returns" : [
+
+        ],
+        "name" : "slackToken",
+        "def" : "ZoomSlack.slackToken"
+      },
+      {
+        "desc" : "String Status emoji. Defaults to \":spiral_calendar_pad:\" if not set.",
+        "stripped_doc" : [
+          "String Status emoji. Defaults to \":spiral_calendar_pad:\" if not set."
+        ],
+        "parameters" : [
+
+        ],
+        "doc" : "String Status emoji. Defaults to \":spiral_calendar_pad:\" if not set.",
+        "notes" : [
+
+        ],
+        "signature" : "ZoomSlack.statusEmoji",
+        "type" : "Variable",
+        "returns" : [
+
+        ],
+        "name" : "statusEmoji",
+        "def" : "ZoomSlack.statusEmoji"
+      },
+      {
+        "desc" : "String Status text. Defaults to \"On a Call\" if not set.",
+        "stripped_doc" : [
+          "String Status text. Defaults to \"On a Call\" if not set."
+        ],
+        "parameters" : [
+
+        ],
+        "doc" : "String Status text. Defaults to \"On a Call\" if not set.",
+        "notes" : [
+
+        ],
+        "signature" : "ZoomSlack.statusText",
+        "type" : "Variable",
+        "returns" : [
+
+        ],
+        "name" : "statusText",
+        "def" : "ZoomSlack.statusText"
+      },
+      {
+        "desc" : "Start ZoomSlack",
+        "stripped_doc" : [
+          "Start ZoomSlack",
+          ""
+        ],
+        "parameters" : [
+          " * None"
+        ],
+        "doc" : "Start ZoomSlack\n\nParameters:\n * None",
+        "notes" : [
+
+        ],
+        "signature" : "ZoomSlack:start()",
+        "type" : "Method",
+        "returns" : [
+
+        ],
+        "name" : "start",
+        "def" : "ZoomSlack:start()"
+      }
+    ],
+    "Method" : [
+      {
+        "desc" : "Start ZoomSlack",
+        "stripped_doc" : [
+          "Start ZoomSlack",
+          ""
+        ],
+        "parameters" : [
+          " * None"
+        ],
+        "doc" : "Start ZoomSlack\n\nParameters:\n * None",
+        "notes" : [
+
+        ],
+        "signature" : "ZoomSlack:start()",
+        "type" : "Method",
+        "returns" : [
+
+        ],
+        "name" : "start",
+        "def" : "ZoomSlack:start()"
+      }
+    ],
+    "name" : "ZoomSlack"
+  }
+]
