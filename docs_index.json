@@ -1,0 +1,49 @@
+[
+  {
+    "desc": "Set your Slack status when in a Zoom meeting. Clear it when you're done.",
+    "name": "ZoomSlack",
+    "type": "Module"
+  },
+  {
+    "desc": "When set to true, don't send messages to the Slack API and don't send notifications. Defaults to false.",
+    "module": "ZoomSlack",
+    "name": "dryRun",
+    "type": "Variable"
+  },
+  {
+    "desc": "String indicating how long until the status expires. Default is \"N\" (Never). Status will always be cleared when a meeting is stopped so this is more insurance than anything if set. Valid expiration times: \"N\", \"30M\", \"45M\", and \"1H\"",
+    "module": "ZoomSlack",
+    "name": "expiration",
+    "type": "Variable"
+  },
+  {
+    "desc": "Logger object used within the Spoon. Can be accessed to set the default log level for the messages coming from the Spoon.",
+    "module": "ZoomSlack",
+    "name": "logger",
+    "type": "Variable"
+  },
+  {
+    "desc": "String Slack token. Uses a [legacy token](https://api.slack.com/custom-integrations/legacy-tokens)",
+    "module": "ZoomSlack",
+    "name": "slackToken",
+    "type": "Variable"
+  },
+  {
+    "desc": "String Status emoji. Defaults to \":spiral_calendar_pad:\" if not set.",
+    "module": "ZoomSlack",
+    "name": "statusEmoji",
+    "type": "Variable"
+  },
+  {
+    "desc": "String Status text. Defaults to \"On a Call\" if not set.",
+    "module": "ZoomSlack",
+    "name": "statusText",
+    "type": "Variable"
+  },
+  {
+    "desc": "Start ZoomSlack",
+    "module": "ZoomSlack",
+    "name": "start",
+    "type": "Method"
+  }
+]

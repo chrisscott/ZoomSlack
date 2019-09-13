@@ -2,9 +2,10 @@
 ---
 --- Set your Slack status when in a Zoom meeting. Clear it when you're done.
 ---
---- You'll need to use a [legacy token] (https://api.slack.com/custom-integrations/legacy-tokens)
+--- You'll need to use a [legacy token](https://api.slack.com/custom-integrations/legacy-tokens)
 --- and pass it in to the configuration along with any other configuration options. e.g.:
 ---
+--- ```
 --- local zoom = hs.spoons.use(
 ---   "ZoomSlack", 
 ---   {
@@ -17,6 +18,7 @@
 --- if zoom then
 ---   spoon.ZoomSlack:start()
 --- end
+--- ```
 ---
 --- https://github.com/chrisscott
 
@@ -31,7 +33,7 @@ obj.license = "MIT - https://opensource.org/licenses/MIT"
 
 --- ZoomSlack.slackToken
 --- Variable
---- String Slack token. Uses a [legacy token] (https://api.slack.com/custom-integrations/legacy-tokens)
+--- String Slack token. Uses a [legacy token](https://api.slack.com/custom-integrations/legacy-tokens)
 obj.slackToken = nil
 
 --- ZoomSlack.statusText
@@ -46,12 +48,7 @@ obj.statusEmoji = ":spiral_calendar_pad:"
 
 --- ZoomSlack.expiration
 --- Variable
---- String indicating how long until the status expires. Default is "N" (Never). Status will always be cleared when a meeting is stopped so this is more insurance than anything if set.
---- Valid expiration times:
---- N
---- 30M
---- 45M
---- 1H
+--- String indicating how long until the status expires. Default is "N" (Never). Status will always be cleared when a meeting is stopped so this is more insurance than anything if set. Valid expiration times: "N", "30M", "45M", and "1H"
 obj.expiration = "N"
 
 --- ZoomSlack.logger

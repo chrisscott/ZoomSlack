@@ -1,0 +1,198 @@
+<html>
+    <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Hammerspoon docs: ZoomSlack</title>
+    <style type="text/css">
+      a { text-decoration: none; }
+      a:hover { text-decoration: underline; }
+      th { background-color: #DDDDDD; vertical-align: top; padding: 3px; }
+      td { width: 100%; background-color: #EEEEEE; vertical-align: top; padding: 3px; }
+      table { width: 100% ; border: 1px solid #0; text-align: left; }
+      section > table table td { width: 0; }
+    </style>
+    <link rel="stylesheet" href="docs.css" type="text/css" media="screen" />
+  </head>
+  <body>
+    <header>
+      <h1><a href="./index.html">docs</a> &raquo; ZoomSlack</h1>
+      <p>Set your Slack status when in a Zoom meeting. Clear it when you're done.</p>
+<p>You'll need to use a <a href="https://api.slack.com/custom-integrations/legacy-tokens">legacy token</a>
+and pass it in to the configuration along with any other configuration options. e.g.:</p>
+
+<pre><code>local zoom = hs.spoons.use(
+  "ZoomSlack", 
+  {
+    config = { 
+      slackToken = "[YOUR SLACK TOKEN]",
+      statusEmoji = ":zoom:"
+    }
+  }
+)
+if zoom then
+  spoon.ZoomSlack:start()
+end</code></pre>
+<p><a href="https://github.com/chrisscott">https://github.com/chrisscott</a></p>
+
+      </header>
+      <h3>API Overview</h3>
+      <ul>
+        <li>Variables - Configurable values</li>
+          <ul>
+            <li><a href="#dryRun">dryRun</a></li>
+            <li><a href="#expiration">expiration</a></li>
+            <li><a href="#logger">logger</a></li>
+            <li><a href="#slackToken">slackToken</a></li>
+            <li><a href="#statusEmoji">statusEmoji</a></li>
+            <li><a href="#statusText">statusText</a></li>
+          </ul>
+        <li>Methods - API calls which can only be made on an object returned by a constructor</li>
+          <ul>
+            <li><a href="#start">start</a></li>
+          </ul>
+      </ul>
+      <h3>API Documentation</h3>
+        <h4 class="documentation-section">Variables</h4>
+          <section id="dryRun">
+            <a name="//apple_ref/cpp/Variable/dryRun" class="dashAnchor"></a>
+            <h5><a href="#dryRun">dryRun</a></h5>
+            <table>
+              <tr>
+                <th>Signature</th>
+                <td><code>ZoomSlack.dryRun</code></td>
+              </tr>
+              <tr>
+                <th>Type</th>
+                <td>Variable</td>
+              </tr>
+              <tr>
+                <th>Description</th>
+                <td><p>When set to true, don't send messages to the Slack API and don't send notifications. Defaults to false.</p>
+</td>
+              </tr>
+            </table>
+          </section>
+          <section id="expiration">
+            <a name="//apple_ref/cpp/Variable/expiration" class="dashAnchor"></a>
+            <h5><a href="#expiration">expiration</a></h5>
+            <table>
+              <tr>
+                <th>Signature</th>
+                <td><code>ZoomSlack.expiration</code></td>
+              </tr>
+              <tr>
+                <th>Type</th>
+                <td>Variable</td>
+              </tr>
+              <tr>
+                <th>Description</th>
+                <td><p>String indicating how long until the status expires. Default is "N" (Never). Status will always be cleared when a meeting is stopped so this is more insurance than anything if set. Valid expiration times: "N", "30M", "45M", and "1H"</p>
+</td>
+              </tr>
+            </table>
+          </section>
+          <section id="logger">
+            <a name="//apple_ref/cpp/Variable/logger" class="dashAnchor"></a>
+            <h5><a href="#logger">logger</a></h5>
+            <table>
+              <tr>
+                <th>Signature</th>
+                <td><code>ZoomSlack.logger</code></td>
+              </tr>
+              <tr>
+                <th>Type</th>
+                <td>Variable</td>
+              </tr>
+              <tr>
+                <th>Description</th>
+                <td><p>Logger object used within the Spoon. Can be accessed to set the default log level for the messages coming from the Spoon.</p>
+</td>
+              </tr>
+            </table>
+          </section>
+          <section id="slackToken">
+            <a name="//apple_ref/cpp/Variable/slackToken" class="dashAnchor"></a>
+            <h5><a href="#slackToken">slackToken</a></h5>
+            <table>
+              <tr>
+                <th>Signature</th>
+                <td><code>ZoomSlack.slackToken</code></td>
+              </tr>
+              <tr>
+                <th>Type</th>
+                <td>Variable</td>
+              </tr>
+              <tr>
+                <th>Description</th>
+                <td><p>String Slack token. Uses a <a href="https://api.slack.com/custom-integrations/legacy-tokens">legacy token</a></p>
+</td>
+              </tr>
+            </table>
+          </section>
+          <section id="statusEmoji">
+            <a name="//apple_ref/cpp/Variable/statusEmoji" class="dashAnchor"></a>
+            <h5><a href="#statusEmoji">statusEmoji</a></h5>
+            <table>
+              <tr>
+                <th>Signature</th>
+                <td><code>ZoomSlack.statusEmoji</code></td>
+              </tr>
+              <tr>
+                <th>Type</th>
+                <td>Variable</td>
+              </tr>
+              <tr>
+                <th>Description</th>
+                <td><p>String Status emoji. Defaults to ":spiral_calendar_pad:" if not set.</p>
+</td>
+              </tr>
+            </table>
+          </section>
+          <section id="statusText">
+            <a name="//apple_ref/cpp/Variable/statusText" class="dashAnchor"></a>
+            <h5><a href="#statusText">statusText</a></h5>
+            <table>
+              <tr>
+                <th>Signature</th>
+                <td><code>ZoomSlack.statusText</code></td>
+              </tr>
+              <tr>
+                <th>Type</th>
+                <td>Variable</td>
+              </tr>
+              <tr>
+                <th>Description</th>
+                <td><p>String Status text. Defaults to "On a Call" if not set.</p>
+</td>
+              </tr>
+            </table>
+          </section>
+        <h4 class="documentation-section">Methods</h4>
+          <section id="start">
+            <a name="//apple_ref/cpp/Method/start" class="dashAnchor"></a>
+            <h5><a href="#start">start</a></h5>
+            <table>
+              <tr>
+                <th>Signature</th>
+                <td><code>ZoomSlack:start()</code></td>
+              </tr>
+              <tr>
+                <th>Type</th>
+                <td>Method</td>
+              </tr>
+              <tr>
+                <th>Description</th>
+                <td><p>Start ZoomSlack</p>
+<p>Parameters:</p>
+<ul>
+<li>None</li>
+</ul>
+<p>Returns:</p>
+<ul>
+<li>None</li>
+</ul>
+</td>
+              </tr>
+            </table>
+          </section>
+  </body>
+</html>
