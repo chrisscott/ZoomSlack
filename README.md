@@ -7,7 +7,7 @@ A Hammerspoon Spoon to set your Slack status when on a Zoom call
 
 ## Installation
 
-1. `git clone https://github.com/chrisscott/ZoomSlack.git ~/.hammerspoon/Spoons`
+1. `git clone https://github.com/chrisscott/ZoomSlack.git ~/.hammerspoon/Spoons/ZoomSlack.spoon`
 1. Get a [legacy Slack token](https://api.slack.com/custom-integrations/legacy-tokens)
 1. Edit your `~/.hammerspoon/init.lua` to include and configure this Spoon with your Slack token and any other [configuration options](./markdown/ZoomSlack.md). e.g:
 
